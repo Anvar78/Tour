@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JourneyGenius</title>
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link
+      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      ::selection {
+        background: rgba(26, 188, 156, 0.3);
+      }
+
+      .wrapper {
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+      }
+      .wrapper .title {
+        height: 90px;
+        background: #86b817;
+        border-radius: 5px 5px 0 0;
+        color: #fff;
+        font-size: 30px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .wrapper form {
+        padding: 30px 2px;
+      }
+      .wrapper form .row {
+        height: 45px;
+        margin-bottom: 15px;
+        position: relative;
+      }
+      .wrapper form .row input {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        padding-left: 60px;
+        border-radius: 5px;
+        border: 1px solid lightgrey;
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+      form .row input:focus {
+        border-color: #86b817;
+        box-shadow: inset 0px 0px 2px 2px rgba(26, 188, 156, 0.25);
+      }
+      form .row input::placeholder {
+        color: #999;
+      }
+      .wrapper form .row i {
+        position: absolute;
+        width: 47px;
+        height: 100%;
+        color: #fff;
+        font-size: 18px;
+        background: #86b817;
+        border: 1px solid #86b817;
+        border-radius: 5px 0 0 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .wrapper form .pass {
+        margin: -8px 0 20px 0;
+      }
+      .wrapper form .pass a {
+        color: #16a085;
+        font-size: 17px;
+        text-decoration: none;
+      }
+      .wrapper form .pass a:hover {
+        text-decoration: underline;
+      }
+      .wrapper form .button input {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+        padding-left: 0px;
+        background: #86b817;
+        border: 1px solid #86b817;
+        cursor: pointer;
+      }
+      form .button input:hover {
+        background: #86b817;
+      }
+      .wrapper form .signup-link {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 17px;
+      }
+      .wrapper form .signup-link a {
+        color: #86b817;
+        text-decoration: none;
+      }
+      form .signup-link a:hover {
+        text-decoration: underline;
+      }
+      @charset "ISO-8859-1";
+
+      body {
+     /*  background-image: url(image/bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed; */
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to right, #0d334d, #3f729b);
+
+      }
+
+      .container {
+        max-width: 440px;
+        margin: 170px auto;
+        text-align: center;
+        color: black;
+      }
+
+      h2 {
+        color: #45b6fe;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        color: #fff;
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0px;
+        text-align: left;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #0e2433;
+      }
+
+      input[type="submit"] {
+        background-color: #86b817;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .message {
+        background-color: #86b817;
+        color: white;
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="message" th:if="${param.error}">
+          Invalid Username or Password
+        </div>
+        <div class="message" th:if="${param.logout}">Logout Successfuly</div>
+
+        <div class="title">
+          <span class="animated slideInDown">Login</span>
+        </div>
+        <form th:action="@{/login}" method="post">
+          <div class="row">
+            <i class="fas fa-user"></i>
+
+            <input
+              type="email"
+              id="username"
+              name="username"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="row">
+            <i class="fas fa-lock"></i>
+
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <input type="submit" value="LOG IN" />
+
+          <div class="signup-link animated slideInDown">
+            Not a member?
+            <a href="http://localhost:8080/registration">SignUp</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

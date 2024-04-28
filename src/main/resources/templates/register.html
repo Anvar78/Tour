@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        .signup-link {
+       text-align: center;
+       margin-top: 20px;
+       font-size: 17px;
+     }
+    .signup-link a {
+       color: #86b817;
+       text-decoration: none;
+     }
+     .signup-link a:hover {
+       text-decoration: underline;
+     }
+       body {
+           margin: 0;
+           padding: 0;
+           font-family: Arial, sans-serif;
+           background: linear-gradient(to right, #0d334d, #3f729b);
+       }
+
+       .container {
+           max-width: 400px;
+           margin: 50px auto;
+           padding: 30px;
+           background-color: #ffffff;
+           border-radius: 10px;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       }
+
+       h2 {
+           color: #fff;
+           margin-bottom: 20px;
+           text-align: center;
+       }
+
+       .form-group {
+           margin-bottom: 20px;
+       }
+
+       label {
+           color: #333;
+           display: block;
+           font-weight: bold;
+           margin-bottom: 5px;
+           text-align: left;
+       }
+
+       input[type="text"],
+       input[type="password"],
+       input[type="email"],
+       input[type="submit"] {
+           width: 100%;
+           padding: 10px;
+           border: 1px solid #ccc;
+           border-radius: 5px;
+           background-color: #f9f9f9;
+           color: #333;
+           box-sizing: border-box;
+           margin-top: 5px;
+       }
+
+       input[type="submit"] {
+           background-color:#86b817;
+           color: #fff;
+           cursor: pointer;
+       }
+
+     .frm-group {
+                 margin-bottom: 10px;
+             }
+             .radio-group {
+                 display: flex;
+                 align-items: center;
+             }
+             .radio-group label {
+                 margin-right: 10px;
+                   margin-top: 10px;
+             }
+       .radio-group label {
+           margin-right: 20px;
+           color: #333;
+       }
+       .message {
+           background-color:#86b817;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+              margin-bottom: 20px;
+            border-radius: 5px;
+               }
+
+       .radio-group input[type="radio"] {
+           margin-right: 5px;
+           vertical-align: middle;
+       }
+
+       .link {
+           display: block;
+           text-align: center;
+           margin-top: 20px;
+           color: #45b6fe;
+           text-decoration: none;
+       }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="message" th:if="${message != null}">
+        [[${message}]]
+    </div>
+    <div style="background-color: #86b817; padding: 10px; margin-bottom: 20px; border-radius: 10px;">
+        <h2>Registration Form</h2>
+    </div>
+    <form
+            th:action="@{/registration}"
+            method="post"
+            role="form"
+            th:object="${user}"
+    >
+        <div class="form-group">
+            <label for="fullname">Full Name:</label>
+            <input th:field="*{fullname}" type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input th:field="*{email}" type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="role"></label>
+            <input th:attr="value=${user.role} ?: 'USER'" type="hidden" id="role" name="role">
+        </div>
+
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input th:field="*{password}" type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group">
+            <label for="street">Street:</label>
+            <input th:field="*{street}" type="text" id="street" name="street" placeholder="Enter your Street"  required>
+        </div>
+        <div class="form-group">
+            <label for="city">City:</label>
+            <input th:field="*{city}" type="text" id="city" name="city" placeholder="Enter your City" required>
+        </div>
+
+        <div class="form-group">
+            <label for="state">State:</label>
+            <input th:field="*{state}" type="text" id="state" name="state" placeholder="Enter your State" required>
+        </div>
+
+        <div class="form-group">
+            <label for="zipCode">Zip Code:</label>
+            <input th:field="*{zipCode}" type="text" id="zipCode" name="zipCode" placeholder="Enter your Zip Code" required>
+        </div>
+
+        <div class="frm-group">
+            <label for="gender">Gender:</label>
+            <!-- Radio buttons side by side -->
+            <div class="radio-group">
+                <input th:field="*{gender}" type="radio" id="male" name="gender" th:value="Male">
+                <label for="male">Male</label>
+            </div>
+            <div class="radio-group">
+                <input th:field="*{gender}" type="radio" id="female" name="gender" th:value="Female">
+                <label for="female" style="fo">Female</label>
+            </div>
+        </div>
+
+        <br>
+
+
+        <input type="submit" value="Register">
+        <div class="signup-link animated slideInDown">
+            Already have an account?
+            <a href="http://localhost:8080/login">LOGIN</a>
+        </div>
+
+
+
+    </form>
+
+</div>
+</body>
+</html>

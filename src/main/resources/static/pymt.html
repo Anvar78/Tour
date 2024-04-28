@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Payment</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .payment-container {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 30px;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .payment-title {
+            color:#86b817;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .payment-form {
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+        input[type="submit"] {
+            background-color: #86b817;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #1c8dd8;
+        }
+    </style>
+</head>
+<body>
+<div class="payment-container">
+    <h2 class="payment-title">Online Payment</h2>
+    <form class="payment-form" action="bkconfirm.html">
+        <div class="form-group">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter your card number" required>
+        </div>
+        <div class="form-group">
+            <label for="expiryDate">Expiry Date</label>
+            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+        </div>
+        <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv" name="cvv" placeholder="Enter CVV" required>
+        </div>
+        <div class="form-group">
+            <label for="cardHolderName">Card Holder Name</label>
+            <input type="text" id="cardHolderName" name="cardHolderName" placeholder="Enter card holder name" required>
+        </div>
+        <input type="submit" value="Pay Now">
+    </form>
+</div>
+</body>
+</html>
